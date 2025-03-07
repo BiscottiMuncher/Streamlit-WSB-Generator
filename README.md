@@ -12,7 +12,7 @@ streamlit run WSBGenerator.py
 ```
 The snippet above will run the application on localhost
 
-Or you can also use the web based version hosted by streamlit! 
+Or you can use the web based version hosted by streamlit! 
 
 https://wsb-generator.streamlit.app/
 
