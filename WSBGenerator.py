@@ -9,10 +9,10 @@ st.title("Windows Sandbox Configuration Generator")
 
 st.html("<hr></hr>")
 
-st.subheader("vGPU", help="Enables or Disables the Sandbox Virtual GPU")
+st.subheader("vGPU", help="Enabled or Disables the Sandbox Virtual GPU")
 vgpu = st.selectbox("Enable vGPU?", ["Enable", "Disable"])
 
-st.subheader("Networking", help="Enables or Disables the Sandbox inbuilt network Network, Used Hyper-V default Switch")
+st.subheader("Networking", help="Enabled or Disables the Sandbox inbuilt network Network, Used Hyper-V default Switch")
 networking = st.selectbox("Enable Networking?", ["Enable", "Disable"])
 
 st.subheader("Mapped Folder Configuration", help="Adds mapped folders from the Host Machine to the Sandbox. If folders are added sources and destinations **MUST** be supplied")
@@ -22,11 +22,11 @@ for folder_id, folder in enumerate(st.session_state.mapped_folders):
     st.text_input(f"Host Folder Path", folder["host"], key=f"host_{folder_id}")
     st.text_input(f"Sandbox Folder Path", folder["sandbox"], key=f"sandbox_{folder_id}", help="WDAGUtilityAccount is the default account on the Sandbox")
     st.checkbox(f"Read-Only?", folder["read_only"], key=f"readonly_{folder_id}")
-    if st.button("Delete Mapped Folders"):  
+    if st.button(f"Delete Mapped Folders {folder_id}"):  
         del st.session_state.mapped_folders[folder_id]
 
 
-st.subheader("Logon Command", help="Defines Command to run at Sandbox logon, field does not have to be filled if you have no command to run")
+st.subheader("Logon Command", help="Defined Command to run at Sandbox logon, field does not have to be filled if you have no command to run")
 logon_command_in = st.text_input("Logon Command", "")
 
 st.subheader("Audio Input", help="Enables or Disables the Audio Input for the Sandbox (Microphone)")
