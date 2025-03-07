@@ -10,11 +10,12 @@ pip install -r requirements.txt
 ```python
 streamlit run WSBGenerator.py
 ```
-The code above will run the application on localhost
+The snippet above will run the application on localhost
 
-Or you can also use the web based version hosted by streamli! 
+Or you can also use the web based version hosted by streamlit! 
 
 https://wsb-generator.streamlit.app/
+
 --- 
 
-Evan Metzingr 2025
+Evan Metzinger 2025
