@@ -14,8 +14,7 @@ The code above will run the application on localhost
 
 Or you can also use the web based version hosted by streamli! 
 
-https://app-wsb-generator.streamlit.app/
-
+https://wsb-generator.streamlit.app/
 --- 
 
 Evan Metzingr 2025
