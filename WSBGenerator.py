@@ -22,7 +22,7 @@ for folder_id, folder in enumerate(st.session_state.mapped_folders):
     st.text_input(f"Host Folder Path", folder["host"], key=f"host_{folder_id}")
     st.text_input(f"Sandbox Folder Path", folder["sandbox"], key=f"sandbox_{folder_id}", help="WDAGUtilityAccount is the default account on the Sandbox")
     st.checkbox(f"Read-Only?", folder["read_only"], key=f"readonly_{folder_id}")
-    if st.button(f"Delete Mapped Folders {folder_id}"):  
+    if st.button(f"Delete Mapped Folder {folder_id}"):  
         del st.session_state.mapped_folders[folder_id]
 
 
